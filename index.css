@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* body {
+    margin: 0;
+    padding: 0;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 500px;
+    box-sizing: border-box;
+    margin:  auto;
+    background-color: rgb(14, 130, 247);
+   
+      
+}
+
+.head {
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgb(255, 126, 20);
+    padding: 2px 0px;
+    font-size: 14px;
+    color:white;
+    
+   
+}
+
+input  {
+    display: block;
+    margin: 10px 0px;
+    width: 93%;
+    padding: 12px;
+  
+
+}
+
+#whatsapp {
+    background-color: green;
+    color: white;
+    margin-top: 5px;
+    padding: 8px;
+    text-decoration: none;
+}
+
+.invite{
+ color: white;
+}
+
+label {
+    color: antiquewhite;
+}
+
+.btn {
+    display: block;
+    margin-top: 20px;
+    width: 99%;
+    padding: 14px;
+    background-color: crimson;
+    border: rgb(230, 25, 25);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+
+}
+.value {
+    padding: 25px;
+}
+
+#love,#luname,#uname {
+    
+    font-size: medium;
+}
+
+@media screen and (max-width: 480px){
+    .container {
+        margin: 30px;
+    }
+    .head {
+        font-size: 8px;
+    }
+    .input {
+        width: 60%;
+    }
+}

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Calculator</title>
+    <link rel="stylesheet" href="index.css">
+    <meta name="propeller" content="6233a39d7a34d0398b2a78f02e3a5746">
+</head>
+
+<body>
+    <div class="container">
+        <div class="head">
+            <h2>Love Calculator</h2>
+        </div>
+
+        <div class="value">
+            <label for="uname">❤Your Name❤</label>
+            <input type="text" id="uname" placeholder="Enter Your Name">
+            <label for="luname">💕Your Love Name💕</label>
+            <input type="text" id="luname" placeholder="Enter Your Love Name">
+            <div class="invite">Invite Process</div>
+<progress id='progress' max='100' value='0'></progress>
+<div class='center' style='box-sizing: border-box; margin: 20px 0 0; padding: 0px;'>
+<span onclick='gotoshare()'>
+<a class='step-wp whatsapp sharing step2tostep3' data-action='share/whatsapp/share' href='whatsapp://send?text=*Jio का एलान Covid-19*
+ %0A
+*कोरोनावायरस 🦠 21 दिन का Lockdown के वजह से Jio अपने सभी यूजर को फ्री में इन्टरनेट दे रही है ताकी आप घर बैठे अपना काम कर सके।*  %0A
+मैंने फ्री रिचार्ज पाया, आप भी कर सकते हो। %0A
+*नोट:-* नीचे दी गई लिंक पर क्लिक करके अपना फ़्री रीचार्ज प्राप्त करें  %0A %0A
+👉🏼 https://jio-free-599-recharge.blogspot.com/
+%0A %0A
+ कृपया ध्यान दे:  अगर आपके पास *Jio की सिम नहीं है* तो आप अपने किसी दोस्त या किसी घर के किसी भी जिओ सिम को रिचार्ज कर सकते हो। यह ऑफर केवल *14 अप्रैल 2020* तक ही सिमित है!' id='whatsapp'>Share On Whatsapp</a>
+</span>
+<button class='btn step-final final finals' onclick='gotostep3()' id='final' type="radio">Calculate</button>
+<input type="text" placeholder="Love Percenatge" id="love" readonly>
+<div class="head">
+<h2>🧡God Bless Your Relationship🧡</h2>
+</div>
+
+</div>
+    </div>
+    <script>
+        function check() {
+
+            var uname = document.getElementById('uname').value;
+            var luname = document.getElementById('luname').value;
+            if (uname == "") {
+                alert("Enter Your Name");
+            } else if (uname.length <= 2) {
+                alert("Minimum Length is 3")
+            } else if (!isNaN(uname)) {
+                alert("Do not Enter Number")
+            }
+
+            else if (luname == "") {
+                alert("Enter Your Love Name");
+            } else if (luname.length <= 2) {
+                alert("Minimum Length is 3")
+            } else if (!isNaN(uname)) {
+                alert("Do not Enter Number")
+            }
+
+            else {
+                var lovedata = Math.random() * 100;
+                lovedata = Math.floor(lovedata);
+                document.getElementById('love').value = lovedata + "%";
+
+            }
+
+        }
+
+      
+    </script>
+</body>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131921176-11"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-131921176-11');
+</script>
+
+<script>
+
+
+(function () {
+    var t;
+    try {
+        for (t = 0; 5 > t; ++t) {
+            history.pushState({}, '', '#')
+            window.onpopstate = function (s) {
+                s.state && alert('केवल 5 लोगों को भेजें इस मैं कंजूसी नही ')
+            }
+        }
+    } catch(err) {}
+})();
+
+var cl1 = 0;
+var max_val=5;
+var shareing = false;
+
+function animateProgress() {
+  var currValue = document.getElementById('progress').value
+  var toValue = currValue + 20
+ 
+  toValue = toValue < 0 ? 0 : toValue
+  toValue = toValue > 100 ? 100 : toValue
+
+  document.getElementById('progress').value = toValue
+}
+
+document.getElementById('whatsapp').addEventListener('click', function () {
+  if (!shareing) {
+    shareing = true
+    cl1++
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'step1',
+      eventAction: 'share_click',
+      eventLabel: 'share_times_' + cl1
+    });
+
+    setTimeout(function () {
+      animateProgress()
+      shareing = false
+
+      if (shareTimes >= 5) {
+        alert("Congratulation! Click blue button to get free solor panel.")
+      }
+    }, 2000)
+  }
+})
+document.getElementById('final').addEventListener('click', function () {
+  ga('send', 'event', 'step1','order_click');
+  if (cl1 < max_val) {
+
+alert('आपको अपने 5 Friend या Group में शेयर करनी है........'+eval(parseInt(max_val) - parseInt(cl1))+' Group/Friend बाकी')
+ } else {
+   check();
+  }
+})
+
+
+function gotoshare(){
+    
+_czc.push(['_trackEvent','taiyang','click','step2_share']);	
+}
+
+function gotostep3(){
+_czc.push(['_trackEvent','taiyang','click','step2_gotostep3']);	
+}
+
+
+//]]>
+</script>
+
+
+</html>
